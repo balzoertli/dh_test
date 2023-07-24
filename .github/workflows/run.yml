@@ -12,7 +12,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - name: Install beautifulsoup4
-              run: pipx install beautifulsoup4
+              run: pip install beautifulsoup4
             - uses: actions/setup-python@v4
               with:
                 python-version: '3.11'
