@@ -1,4 +1,4 @@
-off:
+on:
     push:
     workflow_dispatch:
     schedule:
