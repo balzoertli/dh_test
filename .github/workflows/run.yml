@@ -17,6 +17,8 @@ jobs:
               with:
                 python-version: '3.11'
                 cache: 'beautifulsoup4'
+            - run: beautifulsoup4 install
+            - run: beautifulsoup4 run pytest
             - run: python start.py > data.json
             - run: |-
                   git config user.name 'GitHub Actions'
