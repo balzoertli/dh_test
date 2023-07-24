@@ -11,14 +11,11 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - uses: actions/checkout@v3
-            - name: Install beautifulsoup4
-              run: pip install beautifulsoup4
+            - run: pip install beautifulsoup4
             - uses: actions/setup-python@v4
               with:
                 python-version: '3.11'
                 cache: 'beautifulsoup4'
-            - run: beautifulsoup4 install
-            - run: beautifulsoup4 run pytest
             - run: python start.py > data.json
             - run: |-
                   git config user.name 'GitHub Actions'
